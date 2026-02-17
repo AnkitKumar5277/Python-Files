@@ -138,3 +138,44 @@ for i in range(terms):
 # 2 raised to power 7 is 128
 # 2 raised to power 8 is 256
 # 2 raised to power 9 is 512
+
+# Python Program to Check Armstrong Number
+num = int(input("Enter a number: "))
+sum = 0
+temp = num
+while temp > 0:
+   digit = temp % 10
+   sum += digit ** 3
+   temp //= 10
+if num == sum:
+   print(num,"is an Armstrong number")
+else:
+   print(num,"is not an Armstrong number")
+# Output 1
+# Enter a number: 663
+# 663 is not an Armstrong number
+# Output 2
+# Enter a number: 407
+# 407 is an Armstrong number
+
+num = 1634
+order = len(str(num))
+sum = 0
+temp = num
+while temp > 0:
+   digit = temp % 10
+   sum += digit ** order
+   temp //= 10
+# display the result
+if num == sum:
+   print(num,"is an Armstrong number")
+else:
+   print(num,"is not an Armstrong number")
+   
+#challenge
+def sum_of_digits(number):
+    return sum(int(digit) for digit in str(number))
+# Example usage:
+number = 12345
+result = sum_of_digits(number)
+print(result)  # Output: 15
